@@ -81,9 +81,8 @@ app.post('/api/gemini', async (req, res) => {
 });
 
 // Start the server
-app.listen(PORT, () => {
-    console.log(`===================================================`);
-    console.log(` IIEC 2026 Innovation Competition Server Active    `);
-    console.log(` Address: http://localhost:${PORT}                 `);
-    console.log(`===================================================`);
-});
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+}
+
+module.exports = app;
