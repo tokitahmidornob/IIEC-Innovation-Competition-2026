@@ -4,7 +4,7 @@ const path = require('path');
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;
 
 // Enable CORS and JSON body parser middleware
 app.use(cors());
@@ -81,8 +81,9 @@ app.post('/api/gemini', async (req, res) => {
 });
 
 // Start the server
-if (process.env.NODE_ENV !== 'production') {
-    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-}
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`IIEC 2026 Innovation Competition Server Active`);
+    console.log(`Server is running on port ${PORT}`);
+});
 
 module.exports = app;
