@@ -746,13 +746,23 @@ h1, h2, h3, h4 {
 
 #ai-chatbot-container {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 20px;
+    right: 20px;
     z-index: 9999;
     font-family: var(--font-body);
 }
 
+@keyframes fab-pulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(236, 72, 153, 0.4), 0 0 0 0 rgba(236, 72, 153, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 28px rgba(236, 72, 153, 0.7), 0 0 0 10px rgba(236, 72, 153, 0);
+    }
+}
+
 .chatbot-fab {
+    position: relative;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -764,11 +774,36 @@ h1, h2, h3, h4 {
     align-items: center;
     justify-content: center;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fab-pulse 2.5s ease-in-out infinite;
 }
 
 .chatbot-fab:hover {
     transform: scale(1.1) rotate(15deg);
     box-shadow: 0 0 30px rgba(236, 72, 153, 0.8);
+    animation: none;
+}
+
+/* Unread notification dot */
+.chatbot-fab .unread-dot {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 13px;
+    height: 13px;
+    background: #ef4444;
+    border-radius: 50%;
+    border: 2px solid #0a0014;
+    display: none;
+    animation: dot-pop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.chatbot-fab .unread-dot.visible {
+    display: block;
+}
+
+@keyframes dot-pop {
+    from { transform: scale(0); }
+    to   { transform: scale(1); }
 }
 
 .fab-icon {
@@ -1109,4 +1144,24 @@ h1, h2, h3, h4 {
     position: absolute;
     left: 0;
     color: var(--accent-crimson);
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .segment-card {
+        flex-direction: column;
+    }
+    
+    img, svg, .segment-card img, .segment-card svg {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+    }
 }

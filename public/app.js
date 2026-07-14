@@ -279,22 +279,54 @@ function initChatbot() {
     const chatbotCloseBtn = document.getElementById("chatbot-close-btn");
     const chatbotInput = document.getElementById("chatbot-input");
     const chatbotSendBtn = document.getElementById("chatbot-send-btn");
+    const unreadDot = document.getElementById("chatbot-unread-dot");
     
     if (!chatbotFab || !chatbotWindow || !chatbotCloseBtn || !chatbotInput || !chatbotSendBtn) return;
-    
-    // Toggle chat window visibility
+
+    // --- Helper: open/close the chat window ---
+    const openChat = () => {
+        chatbotWindow.classList.add("active");
+        if (unreadDot) unreadDot.classList.remove("visible");
+        chatbotInput.focus();
+    };
+
+    const closeChat = () => {
+        chatbotWindow.classList.remove("active");
+    };
+
+    // --- Toggle chat window visibility ---
     chatbotFab.addEventListener("click", () => {
-        chatbotWindow.classList.toggle("active");
         if (chatbotWindow.classList.contains("active")) {
-            chatbotInput.focus();
+            closeChat();
+        } else {
+            openChat();
         }
     });
-    
+
     chatbotCloseBtn.addEventListener("click", () => {
-        chatbotWindow.classList.remove("active");
+        closeChat();
+        // Show the unread dot to remind the user the concierge is waiting
+        if (unreadDot) unreadDot.classList.add("visible");
     });
-    
-    // Send message logic
+
+    // --- Auto-greeting: once per visit ---
+    const GREETED_KEY = "iiec_concierge_greeted";
+    if (!localStorage.getItem(GREETED_KEY)) {
+        localStorage.setItem(GREETED_KEY, "true");
+
+        setTimeout(() => {
+            // Open the chat window
+            openChat();
+
+            // Append the welcome system message
+            appendChatMessage(
+                "bot",
+                "Welcome to IIEC 2026! I am your AI Concierge. Need help navigating our competition segments or registration?"
+            );
+        }, 3000);
+    }
+
+    // --- Send message logic ---
     const handleSend = async () => {
         const messageText = chatbotInput.value.trim();
         if (!messageText) return;
