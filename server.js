@@ -28,7 +28,7 @@ app.post('/api/gemini', async (req, res) => {
             return res.status(500).json({ error: "Server configuration error: API Key missing" });
         }
         
-        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=${apiKey}`;
         
         const payload = {
             contents: [
