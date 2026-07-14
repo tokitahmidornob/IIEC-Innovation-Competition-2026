@@ -115,8 +115,8 @@ body {
 
 /* Base Utility Classes */
 .container {
-    width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
+    width: 95%;
     margin: 0 auto;
     padding: 0 1.5rem;
 }
@@ -1164,4 +1164,43 @@ h1, h2, h3, h4 {
     .hero-title {
         font-size: 2.2rem;
     }
+}
+
+@media (max-width: 768px) {
+  body { padding: 5px; }
+  .competition-segments { 
+    display: flex; 
+    flex-direction: column !important; 
+    align-items: center; 
+    gap: 15px; 
+  }
+  .segment-card { 
+    width: 90% !important; 
+    margin: 0 auto; 
+  }
+  .hero-section { text-align: center; }
+  .chat-widget { 
+    bottom: 10px !important; 
+    right: 10px !important; 
+    width: 90% !important; 
+  }
+}
+
+@media (min-width: 769px) {
+  .competition-segments {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .segment-grid {
+    justify-content: center;
+  }
+  
+  .segment-card img {
+    max-width: 100%;
+    height: auto;
+  }
 }
