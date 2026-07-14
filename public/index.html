@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Official website for the IIEC Innovation Competition 2026 by IUBAT. 75K BDT Prize Pool. July 25-26, 2026. Pre-register for a 10% discount.">
+    <meta name="description" content="Official website for the IIEC Innovation Competition 2026 by IUBAT. 75K BDT Prize Pool. July 25-26, 2026. Register now.">
     <title>IIEC Innovation Competition 2026 | IUBAT</title>
     
     <!-- Modern Typography Fonts -->
@@ -61,11 +61,7 @@
                 </div>
 
                 <div class="cta-group">
-                    <button id="hero-cta-btn" class="btn btn-primary btn-glow">Pre-Register Now</button>
-                    <div class="offer-tag">
-                        <span class="tag-pulse"></span>
-                        <span class="offer-text"><strong>10% OFF</strong> Pre-Registration, Early Info &amp; Slot Confirmation</span>
-                    </div>
+                    <button id="hero-cta-btn" class="btn btn-primary btn-glow">Register Now</button>
                 </div>
             </div>
         </section>
@@ -85,9 +81,34 @@
         <div class="container footer-container">
             <p>&copy; 2026 IUBAT Innovation and Entrepreneurship Center. All Rights Reserved.</p>
             <p class="footer-sub">Designed for academic excellence &amp; technical innovation.</p>
-            <!-- -->
         </div>
     </footer>
+
+    <!-- Chatbot FAB and Panel -->
+    <div id="ai-chatbot-container">
+        <button id="chatbot-fab" class="chatbot-fab" aria-label="Open Chatbot">
+            <span class="fab-icon">⚡</span>
+        </button>
+        <div id="chatbot-window" class="chatbot-window glass">
+            <div class="chatbot-header">
+                <span class="bot-avatar">🤖</span>
+                <div class="bot-info">
+                    <div class="bot-name">IIEC Concierge</div>
+                    <div class="bot-status">Online</div>
+                </div>
+                <button id="chatbot-close-btn" class="chatbot-close-btn">&times;</button>
+            </div>
+            <div id="chatbot-messages" class="chatbot-messages">
+                <div class="message bot-message">
+                    Hello! I am your IIEC 2026 Concierge. How can I help you today?
+                </div>
+            </div>
+            <div class="chatbot-input-area">
+                <input type="text" id="chatbot-input" placeholder="Type a message..." autocomplete="off">
+                <button id="chatbot-send-btn" class="chatbot-send-btn">Send</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Database and Application Scripts -->
     <script src="data.js"></script>
