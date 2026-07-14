@@ -309,21 +309,19 @@ function initChatbot() {
         if (unreadDot) unreadDot.classList.add("visible");
     });
 
-    // --- Auto-greeting: once per visit ---
-    const GREETED_KEY = "iiec_concierge_greeted";
-    if (!localStorage.getItem(GREETED_KEY)) {
-        localStorage.setItem(GREETED_KEY, "true");
-
+    // Proactive Chatbot Greeting
+    if (!localStorage.getItem('hasSeenGreeting')) {
         setTimeout(() => {
-            // Open the chat window
+            // Function to open the chat widget
             openChat();
-
-            // Append the welcome system message
-            appendChatMessage(
-                "bot",
-                "Welcome to IIEC 2026! I am your AI Concierge. Need help navigating our competition segments or registration?"
-            );
-        }, 3000);
+            
+            // Send the welcome message
+            const welcomeMsg = "Welcome to IIEC 2026! I am your AI Concierge. Need help navigating our competition segments or registration?";
+            appendChatMessage('bot', welcomeMsg);
+            
+            // Mark as seen
+            localStorage.setItem('hasSeenGreeting', 'true');
+        }, 3000); // 3-second delay
     }
 
     // --- Send message logic ---
