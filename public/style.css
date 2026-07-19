@@ -52,6 +52,11 @@
     padding: 0;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 html {
     scroll-behavior: smooth;
     font-size: 16px;
@@ -489,6 +494,8 @@ h1, h2, h3, h4 {
 
 /* Segment Card Styling */
 .segment-card {
+    width: 100%;
+    box-sizing: border-box;
     position: relative;
     background: rgba(30, 15, 45, 0.4);
     backdrop-filter: blur(12px);
@@ -1166,18 +1173,21 @@ h1, h2, h3, h4 {
     }
 }
 
+.competition-segments {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
 @media (max-width: 768px) {
   body { padding: 5px; }
-  .competition-segments { 
-    display: flex; 
-    flex-direction: column !important; 
-    align-items: center; 
-    gap: 15px; 
-  }
-  .segment-card { 
-    width: 90% !important; 
-    margin: 0 auto; 
-  }
+  .hero-section { padding: 40px 15px; }
+  .hero-section h1 { font-size: 2rem !important; }
   .hero-section { text-align: center; }
   .chat-widget { 
     bottom: 10px !important; 
@@ -1187,14 +1197,6 @@ h1, h2, h3, h4 {
 }
 
 @media (min-width: 769px) {
-  .competition-segments {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-  }
-  
   .segment-grid {
     justify-content: center;
   }
@@ -1203,4 +1205,30 @@ h1, h2, h3, h4 {
     max-width: 100%;
     height: auto;
   }
+}
+
+/* Universal Payment Button Integration */
+.button-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.button-container .btn {
+    flex: 1;
+}
+
+.pay-btn {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #1a0b26;
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+    font-weight: 700;
+}
+
+.pay-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.6);
+    color: #1a0b26;
 }

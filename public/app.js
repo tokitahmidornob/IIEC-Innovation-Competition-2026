@@ -33,7 +33,10 @@ function renderHome() {
                     <p class="card-desc">${segment.shortDesc}</p>
                     <div class="card-actions">
                         <a href="${segment.rulebookLink}" class="btn btn-card btn-outline">Read Rulebook</a>
-                        <a href="${segment.regLink}" class="btn btn-card btn-primary">Register Now</a>
+                        <div class="button-container">
+                            <a href="${segment.regLink}" class="btn btn-card btn-primary" style="flex: 1;">Register Now</a>
+                            <a href="https://iubatpayment.net/payment/IIEC" target="_blank" class="btn btn-card pay-btn" style="flex: 1;">Payment</a>
+                        </div>
                         <button class="btn btn-card btn-outline view-details-btn" data-id="${segment.id}">View Details</button>
                     </div>
                 </div>
@@ -118,7 +121,10 @@ function renderSegment(segmentId) {
                 
                 <div class="detail-footer-actions">
                     <a href="${segment.rulebookLink}" class="btn btn-outline detail-action-btn">Read Rulebook</a>
-                    <a href="${segment.regLink}" class="btn btn-primary btn-glow detail-action-btn">Register Now</a>
+                    <div class="button-container">
+                        <a href="${segment.regLink}" class="btn btn-primary btn-glow detail-action-btn" style="flex: 1;">Register Now</a>
+                        <a href="https://iubatpayment.net/payment/IIEC" target="_blank" class="btn pay-btn detail-action-btn" style="flex: 1;">Payment</a>
+                    </div>
                 </div>
                 
                 ${validatorHtml}
