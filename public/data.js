@@ -58,6 +58,9 @@ const competitionSegments = [
         title: "Hackathon",
         shortDesc: "A high-stakes, 24-hour coding sprint to build innovative software solutions addressing real-world problems.",
         fullDesc: "An intensive software design and programming challenge. Teams are given real-world problem statements and must brainstorm, write, and deploy a working web, mobile, or desktop application within a strict 24-hour time limit. Projects are evaluated on code quality, UI/UX design, viability, and pitch delivery.",
+        teamSize: "Solo or up to 3 members",
+        fee: "1000 BDT per team",
+        prizePool: "Champion: 5000 BDT, Runner-Up: 3000 BDT, 2nd Runner-Up: 2000 BDT",
         rulebookLink: "#",
         regLink: "https://forms.gle/iYvsJ3S8Fc4o8xiQ7"
     },
