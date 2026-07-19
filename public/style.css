@@ -74,6 +74,11 @@ body {
     min-height: 100vh;
 }
 
+#app-root {
+    min-height: 100vh;
+    overflow: visible;
+}
+
 /* Background Glowing Orbs for Sci-Fi/High-Tech vibe */
 .glow-orb {
     position: absolute;
