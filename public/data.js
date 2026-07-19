@@ -103,6 +103,7 @@ const competitionSegments = [
         fullDesc: "The launchpad for new entrepreneurs. Pitch your innovative product concepts or startup strategies to a jury of venture capitalists, business incubators, and industry experts. Focus on problem identification, market sizing, revenue models, scalability, and the team's capacity to execute.",
         teamSize: "Up to 2 members (minimum 1)",
         fee: "400 BDT per team",
+        requiresPayment: false,
         prizePool: "Top 5 Teams receive 1000 BDT each",
         rulebookLink: "#",
         regLink: "https://forms.gle/XSaReBPbaqkfYANe6"
