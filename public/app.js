@@ -343,18 +343,18 @@ function initChatbot() {
         if (unreadDot) unreadDot.classList.add("visible");
     });
 
-    // Proactive Chatbot Greeting
-    if (!localStorage.getItem('hasSeenGreeting')) {
+    // Proactive Chatbot Greeting — fires once per session after 3s delay
+    if (!sessionStorage.getItem('botGreeted')) {
         setTimeout(() => {
-            // Function to open the chat widget
+            // Open the chat window with the smooth transition
             openChat();
             
-            // Send the welcome message
-            const welcomeMsg = "Welcome to IIEC 2026! I am your AI Concierge. Need help navigating our competition segments or registration?";
-            appendChatMessage('bot', welcomeMsg);
+            // Inject the welcome greeting
+            const greetingMsg = "Welcome to the IIEC Innovation Competition 2026! How can I assist you today?";
+            appendChatMessage('bot', greetingMsg);
             
-            // Mark as seen
-            localStorage.setItem('hasSeenGreeting', 'true');
+            // Mark the session so it doesn't auto-open again on refresh/navigation
+            sessionStorage.setItem('botGreeted', 'true');
         }, 3000); // 3-second delay
     }
 
