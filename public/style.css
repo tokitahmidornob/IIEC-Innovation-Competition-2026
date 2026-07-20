@@ -1052,6 +1052,26 @@ h1, h2, h3, h4 {
     color: var(--text-dim) !important;
 }
 
+.developer-credit {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.dev-name {
+    color: var(--accent-pink);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.dev-name:hover {
+    color: #fff;
+    text-shadow: 0 0 8px var(--accent-pink);
+}
+
 /* Tablet & Mobile Responsiveness adjustments */
 @media (max-width: 768px) {
     .hero-title {
