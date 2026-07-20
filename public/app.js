@@ -35,7 +35,7 @@ function renderHome() {
                     <h3 class="card-title">${segment.title}</h3>
                     <p class="card-desc">${segment.shortDesc}</p>
                     <div class="card-actions">
-                        <a href="${segment.rulebookLink}" class="btn btn-card btn-outline">Read Rulebook</a>
+                        <a href="${segment.rulebookUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-card btn-outline">Read Rulebook</a>
                         <div class="button-container">
                             <a href="${segment.regLink}" class="btn btn-card btn-primary" style="flex: 1;">Register Now</a>
                             ${segment.requiresPayment !== false ? `<a href="https://iubatpayment.net/payment/IIEC" target="_blank" class="btn btn-card pay-btn" style="flex: 1;">Payment</a>` : ''}
@@ -126,7 +126,7 @@ function renderSegment(segmentId) {
                 </div>
                 
                 <div class="detail-footer-actions">
-                    <a href="${segment.rulebookLink}" class="btn btn-outline detail-action-btn">Read Rulebook</a>
+                    <a href="${segment.rulebookUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline detail-action-btn">Read Rulebook</a>
                     <div class="button-container">
                         <a href="${segment.regLink}" class="btn btn-primary btn-glow detail-action-btn" style="flex: 1;">Register Now</a>
                         ${segment.requiresPayment !== false ? `<a href="https://iubatpayment.net/payment/IIEC" target="_blank" class="btn pay-btn detail-action-btn" style="flex: 1;">Payment</a>` : ''}

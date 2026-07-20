@@ -8,7 +8,7 @@ const competitionSegments = [
         teamSize: "Up to 3 members (minimum 1)",
         fee: "1000 BDT per team",
         prizePool: "Champion: 5000 BDT, Runner-Up: 3000 BDT, 2nd Runner-Up: 2000 BDT",
-        rulebookLink: "#",
+        rulebookUrl: "https://drive.google.com/file/d/1WahHeuJAxUppBwImxtjRHeOqjtFDCsGe/view?usp=sharing",
         regLink: "https://forms.gle/GHfEpTw4JuqJbNLVA"
     },
     {
@@ -19,7 +19,7 @@ const competitionSegments = [
         teamSize: "Up to 2 members (minimum 1)",
         fee: "500 BDT per team",
         prizePool: "Champion: 2500 BDT, Runner-Up: 1500 BDT, 2nd Runner-Up: 1000 BDT",
-        rulebookLink: "#",
+        rulebookUrl: "https://drive.google.com/file/d/1uct2VudJAhMCXwxCxNF9COU37K7UywDc/view?usp=sharing",
         regLink: "https://forms.gle/Uqoa64gp9vdzWoXU6"
     },
     {
@@ -28,7 +28,7 @@ const competitionSegments = [
         shortDesc: "Build autonomous robots designed to navigate complex paths with loops, gaps, and obstacles in record time.",
         fullDesc: "A test of pure robotics speed and precision control. Build an autonomous vehicle that can track a line on a contrasting surface. The custom-designed track features sharp turns, intersections, bridges, loops, and breaks to test sensor calibration, speed regulation, and pathfinding logic. Time is of the essence, and penalties are applied for going off-track.",
         teamSize: "Solo or up to 3 members",
-        rulebookLink: "#",
+        rulebookUrl: "https://drive.google.com/file/d/1tP3elDs6UoyFMCTamQnapqabg2oEb1Vf/view?usp=sharing",
         regLink: "https://forms.gle/APrB9C32RnK2AdSi7"
     },
     {
@@ -39,7 +39,7 @@ const competitionSegments = [
         teamSize: "Up to 3 members (minimum 1)",
         fee: "1000 BDT per team",
         prizePool: "Champion: 5000 BDT, Runner-Up: 3000 BDT, 2nd Runner-Up: 2000 BDT",
-        rulebookLink: "#",
+        rulebookUrl: "https://drive.google.com/file/d/1y2VSOV3YF2cV5Ly39LmMR19PJncerV30/view?usp=sharing",
         regLink: "https://forms.gle/WfwTSypPncWsBdyk8"
     },
     {
@@ -50,7 +50,7 @@ const competitionSegments = [
         teamSize: "Up to 3 members (minimum 1)",
         fee: "1000 BDT per team",
         prizePool: "Champion: 5000 BDT, Runner-Up: 3000 BDT, 2nd Runner-Up: 2000 BDT",
-        rulebookLink: "#",
+        rulebookUrl: "https://drive.google.com/file/d/1RzIITJqnK9-VVBjiukJv2yMV1E7nNLoY/view?usp=sharing",
         regLink: "https://forms.gle/kaZM8snuFtsLrRqA6"
     },
     {
@@ -61,7 +61,7 @@ const competitionSegments = [
         teamSize: "Solo or up to 3 members",
         fee: "1000 BDT per team",
         prizePool: "Champion: 5000 BDT, Runner-Up: 3000 BDT, 2nd Runner-Up: 2000 BDT",
-        rulebookLink: "#",
+        rulebookUrl: "https://drive.google.com/file/d/1HbehHCOIOvEafnKqaWSKc6HdfsX5Pdju/view?usp=sharing",
         regLink: "https://forms.gle/iYvsJ3S8Fc4o8xiQ7"
     },
     {
@@ -72,7 +72,7 @@ const competitionSegments = [
         teamSize: "Exactly 2 members",
         fee: "600 BDT per team",
         prizePool: "Champion: 2500 BDT, 1st Runner-Up: 2000 BDT, 2nd Runner-Up: 1500 BDT",
-        rulebookLink: "#",
+        rulebookUrl: "https://drive.google.com/file/d/15vIPFkHfeQygk1l2eM9CMXKO2jrW8-vY/view?usp=sharing",
         regLink: "https://forms.gle/mmtcemfNJtnYFATi7"
     },
     {
@@ -82,7 +82,7 @@ const competitionSegments = [
         fullDesc: "Test your civil and structural designs under seismic conditions. Teams design multi-story structures using specified materials. The structural integrity is tested on a dynamic shake table simulating realistic earthquake vibrations. Points are awarded for survival, height, and material efficiency.",
         teamSize: "Solo or max 2 members",
         prizePool: "Champion: 3000 BDT, Runner-Up: 2500 BDT, 2nd Runner-Up: 1500 BDT",
-        rulebookLink: "#",
+        rulebookUrl: "https://drive.google.com/file/d/1Qh_kqqajfW6Fu6YkSl7WGhDtU3PgpEM2/view?usp=sharing",
         regLink: "https://forms.gle/XHpsNEeWiDFQ5iF19"
     },
     {
@@ -93,7 +93,7 @@ const competitionSegments = [
         teamSize: "Exactly 2 members",
         fee: "500 BDT per team",
         prizePool: "Champion: 3000 BDT, Runner-Up: 2500 BDT, 2nd Runner-Up: 1500 BDT",
-        rulebookLink: "#",
+        rulebookUrl: "https://drive.google.com/file/d/1kcNtyHpYGYqEWoXTCwg0yG3sppkJJz4V/view?usp=sharing",
         regLink: "https://forms.gle/vJ426Sbcza3tdqeL6"
     },
     {
@@ -105,7 +105,7 @@ const competitionSegments = [
         fee: "400 BDT per team",
         requiresPayment: false,
         prizePool: "Top 5 Teams receive 1000 BDT each",
-        rulebookLink: "#",
+        rulebookUrl: "https://drive.google.com/file/d/1iAJGqe8tXZtoIAJ_6sBEhG-HbSMdIUOT/view?usp=sharing",
         regLink: "https://forms.gle/XSaReBPbaqkfYANe6"
     }
 ];
