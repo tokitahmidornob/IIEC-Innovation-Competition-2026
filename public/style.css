@@ -31,22 +31,36 @@
     --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Custom Scrollbar for modern webkit browsers */
-html::-webkit-scrollbar {
-    width: 8px;
+/* ==========================================
+   Scrollbar Eradication & Locomotive Scroll Boilerplate
+   ========================================== */
+
+/* Kill all native scrollbars */
+*::-webkit-scrollbar {
+    display: none !important;
 }
 
-html::-webkit-scrollbar-track {
-    background: #1a0b26;
+html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-html::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, var(--accent-pink) 0%, var(--accent-crimson) 100%);
-    border-radius: 4px;
+/* Locomotive Scroll: smooth scrolling container rules */
+html.has-scroll-smooth {
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
 
-html::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, var(--primary-purple) 0%, var(--accent-pink) 100%);
+html.has-scroll-smooth body {
+    overflow: hidden;
+}
+
+[data-scroll-container] {
+    min-height: 100vh;
 }
 
 /* CSS Reset */
@@ -58,7 +72,6 @@ html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    overflow-y: auto !important;
 }
 
 html {
@@ -1237,17 +1250,6 @@ h1, h2, h3, h4 {
     text-align: left;
 }
 
-/* Custom scrollbar for chatbot message area */
-.chatbot-messages::-webkit-scrollbar {
-    width: 5px;
-}
-.chatbot-messages::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.1);
-}
-.chatbot-messages::-webkit-scrollbar-thumb {
-    background: rgba(255, 105, 180, 0.3);
-    border-radius: 10px;
-}
 
 .message {
     padding: 0.75rem 1rem;

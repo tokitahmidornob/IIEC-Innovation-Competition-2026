@@ -1,5 +1,8 @@
 // IIEC Innovation Competition 2026 - SPA Routing Engine
 
+// Global Locomotive Scroll instance
+let locoScroll = null;
+
 // Render the grid list of all competition segments
 function renderHome() {
     const contentArea = document.getElementById("content-area");
@@ -47,6 +50,9 @@ function renderHome() {
     htmlContent += `</div>`;
     contentArea.innerHTML = htmlContent;
     initTilt(); // Initialize the dynamic 3D tilt effect
+
+    // Notify Locomotive Scroll of DOM changes
+    if (locoScroll) locoScroll.update();
 }
 
 // Render the detailed view for a single segment
@@ -132,8 +138,15 @@ function renderSegment(segmentId) {
         </div>
     `;
     
-    // Smooth scroll to top of page when viewing details
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Smooth scroll to top using Locomotive Scroll
+    if (locoScroll) {
+        locoScroll.scrollTo(0, { duration: 800, disableLerp: false });
+    } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Notify Locomotive Scroll of DOM changes
+    if (locoScroll) locoScroll.update();
 }
 
 // Setup Event Listeners for Dynamic Routing
@@ -216,7 +229,11 @@ function initRouter() {
         heroCtaBtn.addEventListener("click", () => {
             const target = document.getElementById("content-area");
             if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
+                if (locoScroll) {
+                    locoScroll.scrollTo(target, { duration: 800, offset: -80 });
+                } else {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
             }
         });
     }
@@ -227,6 +244,17 @@ document.addEventListener("DOMContentLoaded", () => {
     renderHome();
     initRouter();
     initChatbot(); // Initialize AI Concierge Chatbot
+
+    // Initialize Locomotive Scroll for smooth scrolling
+    const scrollContainer = document.querySelector('[data-scroll-container]');
+    if (scrollContainer && typeof LocomotiveScroll !== 'undefined') {
+        locoScroll = new LocomotiveScroll({
+            el: scrollContainer,
+            smooth: true,
+            multiplier: 1,
+            lerp: 0.08
+        });
+    }
 });
 
 // Dynamic 3D Tilt Effect on cards

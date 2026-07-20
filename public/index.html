@@ -11,10 +11,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;800;900&display=swap" rel="stylesheet">
     
+    <!-- Locomotive Scroll CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+
     <!-- Main Custom Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Locomotive Scroll Container: wraps all scrollable page content -->
+    <div data-scroll-container>
+
     <!-- High-Tech Glow Orbs -->
     <div class="glow-orb orb-1"></div>
     <div class="glow-orb orb-2"></div>
@@ -225,6 +231,8 @@
         </div>
     </footer>
 
+    </div><!-- /data-scroll-container -->
+
     <!-- Chatbot FAB and Panel -->
     <div id="ai-chatbot-container">
         <button id="chatbot-fab" class="chatbot-fab" aria-label="Open Chatbot">
@@ -251,6 +259,9 @@
             </div>
         </div>
     </div>
+
+    <!-- Locomotive Scroll JS -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
 
     <!-- Database and Application Scripts -->
     <script src="data.js"></script>
