@@ -28,7 +28,7 @@ const competitionSegments = [
         shortDesc: "Build autonomous robots designed to navigate complex paths with loops, gaps, and obstacles in record time.",
         fullDesc: "A test of pure robotics speed and precision control. Build an autonomous vehicle that can track a line on a contrasting surface. The custom-designed track features sharp turns, intersections, bridges, loops, and breaks to test sensor calibration, speed regulation, and pathfinding logic. Time is of the essence, and penalties are applied for going off-track.",
         teamSize: "Solo or up to 3 members",
-        rulebookUrl: "https://drive.google.com/file/d/1tP3elDs6UoyFMCTamQnapqabg2oEb1Vf/view?usp=sharing",
+        rulebookUrl: "https://drive.google.com/file/d/1PWIJAUoZ65C3HMp7XfWHpHmzah0Gmhd_/view?usp=sharing",
         regLink: "https://forms.gle/APrB9C32RnK2AdSi7"
     },
     {
@@ -39,7 +39,7 @@ const competitionSegments = [
         teamSize: "Up to 3 members (minimum 1)",
         fee: "1000 BDT per team",
         prizePool: "Champion: 5000 BDT, Runner-Up: 3000 BDT, 2nd Runner-Up: 2000 BDT",
-        rulebookUrl: "https://drive.google.com/file/d/1y2VSOV3YF2cV5Ly39LmMR19PJncerV30/view?usp=sharing",
+        rulebookUrl: "https://drive.google.com/file/d/1almtr_Wp2uyPipEVlPnIK9dQLYyeyw0i/view?usp=sharing",
         regLink: "https://forms.gle/WfwTSypPncWsBdyk8"
     },
     {
@@ -50,7 +50,7 @@ const competitionSegments = [
         teamSize: "Up to 3 members (minimum 1)",
         fee: "1000 BDT per team",
         prizePool: "Champion: 5000 BDT, Runner-Up: 3000 BDT, 2nd Runner-Up: 2000 BDT",
-        rulebookUrl: "https://drive.google.com/file/d/1RzIITJqnK9-VVBjiukJv2yMV1E7nNLoY/view?usp=sharing",
+        rulebookUrl: "https://drive.google.com/file/d/1-sGISgttjfrAvcJc2dcPUsakaLSWq8Ol/view?usp=sharing",
         regLink: "https://forms.gle/kaZM8snuFtsLrRqA6"
     },
     {
@@ -82,7 +82,7 @@ const competitionSegments = [
         fullDesc: "Test your civil and structural designs under seismic conditions. Teams design multi-story structures using specified materials. The structural integrity is tested on a dynamic shake table simulating realistic earthquake vibrations. Points are awarded for survival, height, and material efficiency.",
         teamSize: "Solo or max 2 members",
         prizePool: "Champion: 3000 BDT, Runner-Up: 2500 BDT, 2nd Runner-Up: 1500 BDT",
-        rulebookUrl: "https://drive.google.com/file/d/1Qh_kqqajfW6Fu6YkSl7WGhDtU3PgpEM2/view?usp=sharing",
+        rulebookUrl: "https://drive.google.com/file/d/1uZ34dhRVSaGMZGPi1RGnnb6xYjwtVJlo/view?usp=sharing",
         regLink: "https://forms.gle/XHpsNEeWiDFQ5iF19"
     },
     {
@@ -93,7 +93,7 @@ const competitionSegments = [
         teamSize: "Exactly 2 members",
         fee: "500 BDT per team",
         prizePool: "Champion: 3000 BDT, Runner-Up: 2500 BDT, 2nd Runner-Up: 1500 BDT",
-        rulebookUrl: "https://drive.google.com/file/d/1kcNtyHpYGYqEWoXTCwg0yG3sppkJJz4V/view?usp=sharing",
+        rulebookUrl: "https://drive.google.com/file/d/1ofAr08XTySXkez0oG7YaocBRPO4BkdIp/view?usp=sharing",
         regLink: "https://forms.gle/vJ426Sbcza3tdqeL6"
     },
     {
