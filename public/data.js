@@ -106,6 +106,6 @@ const competitionSegments = [
         requiresPayment: false,
         prizePool: "Top 5 Teams receive 1000 BDT each",
         rulebookUrl: "https://drive.google.com/file/d/1iAJGqe8tXZtoIAJ_6sBEhG-HbSMdIUOT/view?usp=sharing",
-        regLink: "https://forms.gle/XSaReBPbaqkfYANe6"
+        regLink: "https://forms.gle/3MwiVdPFvfkYgwf58"
     }
 ];
