@@ -100,12 +100,13 @@ const competitionSegments = [
         id: "idea-pitching",
         title: "Idea Pitching",
         shortDesc: "Pitch your revolutionary startup or product concepts to venture capitalists and entrepreneurship mentors.",
-        fullDesc: "The launchpad for new entrepreneurs. Pitch your innovative product concepts or startup strategies to a jury of venture capitalists, business incubators, and industry experts. Focus on problem identification, market sizing, revenue models, scalability, and the team's capacity to execute.",
+        fullDesc: "The launchpad for new entrepreneurs. Pitch your innovative product concepts or startup strategies to a jury of venture capitalists, business incubators, and industry experts. Focus on problem identification, market sizing, revenue models, scalability, and the team's capacity to execute.\n\nRound 1 (Abstract Submission): Free entry. Submit a 2-page PDF abstract by July 24, 2026.\nShortlist Announcement: July 28, 2026.\nFinal Round: BDT 400 registration fee for shortlisted teams. Presentation on August 2, 2026.",
         teamSize: "Up to 2 members (minimum 1)",
-        fee: "400 BDT per team",
+        fee: "Round 1: FREE | Final Round: BDT 400 (Selected Teams)",
         requiresPayment: false,
         prizePool: "Top 5 Teams receive 1000 BDT each",
         rulebookUrl: "https://drive.google.com/file/d/1iAJGqe8tXZtoIAJ_6sBEhG-HbSMdIUOT/view?usp=sharing",
-        regLink: "https://forms.gle/3MwiVdPFvfkYgwf58"
+        regLink: "YOUR_GOOGLE_FORM_URL_HERE",
+        actionText: "Submit Abstract (Free)"
     }
 ];

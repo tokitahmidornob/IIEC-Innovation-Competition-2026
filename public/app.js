@@ -31,13 +31,16 @@ function renderHome() {
             <article class="segment-card glass">
                 <div class="card-glow"></div>
                 <div class="card-content">
-                    <div class="card-badge">Segment ${formattedIndex}</div>
+                    <div class="card-badges" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+                        <div class="card-badge">Segment ${formattedIndex}</div>
+                        ${segment.fee ? `<div class="fee-badge" style="font-size: 0.75rem; color: var(--accent-pink, #ff6b6b); text-align: right; max-width: 60%; line-height: 1.3; font-weight: 600;">${segment.fee}</div>` : ''}
+                    </div>
                     <h3 class="card-title">${segment.title}</h3>
                     <p class="card-desc">${segment.shortDesc}</p>
                     <div class="card-actions">
                         <a href="${segment.rulebookUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-card btn-outline">Read Rulebook</a>
                         <div class="button-container">
-                            <a href="${segment.regLink}" class="btn btn-card btn-primary" style="flex: 1;">Register Now</a>
+                            <a href="${segment.regLink}" target="_blank" rel="noopener noreferrer" class="btn btn-card btn-primary" style="flex: 1;">${segment.actionText || 'Register Now'}</a>
                             ${segment.requiresPayment !== false ? `<a href="https://iubatpayment.net/payment/IIEC" target="_blank" class="btn btn-card pay-btn" style="flex: 1;">Payment</a>` : ''}
                         </div>
                         <button class="btn btn-card btn-outline view-details-btn" data-id="${segment.id}">View Details</button>
@@ -114,6 +117,11 @@ function renderSegment(segmentId) {
                             <span class="meta-label">Venue</span>
                             <span class="meta-value">IUBAT Campus</span>
                         </div>
+                        ${segment.fee ? `
+                        <div class="detail-meta-item" style="flex: 1 1 100%;">
+                            <span class="meta-label">Registration Fee</span>
+                            <span class="meta-value text-pink" style="white-space: normal; line-height: 1.4;">${segment.fee}</span>
+                        </div>` : ''}
                         <div class="detail-meta-item">
                             <span class="meta-label">Estimated Prize Pool</span>
                             <span class="meta-value text-glow-pink">75K BDT (Shared Pool)</span>
@@ -128,7 +136,7 @@ function renderSegment(segmentId) {
                 <div class="detail-footer-actions">
                     <a href="${segment.rulebookUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline detail-action-btn">Read Rulebook</a>
                     <div class="button-container">
-                        <a href="${segment.regLink}" class="btn btn-primary btn-glow detail-action-btn" style="flex: 1;">Register Now</a>
+                        <a href="${segment.regLink}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-glow detail-action-btn" style="flex: 1;">${segment.actionText || 'Register Now'}</a>
                         ${segment.requiresPayment !== false ? `<a href="https://iubatpayment.net/payment/IIEC" target="_blank" class="btn pay-btn detail-action-btn" style="flex: 1;">Payment</a>` : ''}
                     </div>
                 </div>
