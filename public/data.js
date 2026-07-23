@@ -39,7 +39,7 @@ const competitionSegments = [
         teamSize: "Up to 3 members (minimum 1)",
         fee: "1000 BDT per team",
         prizePool: "Champion: 5000 BDT, Runner-Up: 3000 BDT, 2nd Runner-Up: 2000 BDT",
-        rulebookUrl: "https://drive.google.com/file/d/1almtr_Wp2uyPipEVlPnIK9dQLYyeyw0i/view?usp=sharing",
+        rulebookUrl: "https://drive.google.com/file/d/1TzQDIkkHGmhjIwgbohmehIqyNo8Tyx76/view?usp=sharing",
         regLink: "https://forms.gle/WfwTSypPncWsBdyk8"
     },
     {
