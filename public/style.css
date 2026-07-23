@@ -1579,3 +1579,92 @@ h1, h2, h3, h4 {
     box-shadow: 0 8px 20px rgba(245, 158, 11, 0.6);
     color: #1a0b26;
 }
+
+/* ==========================================
+   Countdown Timer Section
+   ========================================== */
+.countdown-wrapper {
+    padding: 3rem 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown-wrapper h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.time-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 120px;
+    animation: heartbeat 1.5s infinite;
+}
+
+.time-val {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent-pink);
+    text-shadow: 0 0 15px var(--accent-pink-glow);
+    font-family: var(--font-heading);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.time-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+#countdown-expired-msg {
+    font-size: 2rem;
+    color: var(--accent-crimson);
+    text-shadow: 0 0 15px var(--accent-crimson-glow);
+    font-weight: 700;
+    margin-top: 2rem;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    15% { transform: scale(1.05); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 600px) {
+    .countdown-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .time-box {
+        min-width: unset;
+        padding: 1rem;
+    }
+    
+    .time-val {
+        font-size: 2.2rem;
+    }
+}

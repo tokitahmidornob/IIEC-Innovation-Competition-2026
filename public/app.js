@@ -252,6 +252,7 @@ document.addEventListener("DOMContentLoaded", () => {
     renderHome();
     initRouter();
     initChatbot(); // Initialize AI Concierge Chatbot
+    initCountdown(); // Initialize the countdown timer
 
     // Initialize Locomotive Scroll for smooth scrolling
     const scrollContainer = document.querySelector('[data-scroll-container]');
@@ -411,4 +412,42 @@ function appendChatMessage(sender, text) {
     chatbotMessages.appendChild(bubble);
     chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
     return bubble;
+}
+
+// Countdown Timer Logic
+function initCountdown() {
+    const targetDate = new Date("July 24, 2026 23:59:59").getTime();
+    
+    const daysEl = document.getElementById("days");
+    const hoursEl = document.getElementById("hours");
+    const minutesEl = document.getElementById("minutes");
+    const secondsEl = document.getElementById("seconds");
+    const container = document.querySelector(".countdown-container");
+    const expiredMsg = document.getElementById("countdown-expired-msg");
+    
+    if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+    
+    const interval = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+        
+        if (distance < 0) {
+            clearInterval(interval);
+            if (container) container.style.display = "none";
+            if (expiredMsg) {
+                expiredMsg.style.display = "block";
+            }
+            return;
+        }
+        
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        daysEl.innerText = String(days).padStart(2, '0');
+        hoursEl.innerText = String(hours).padStart(2, '0');
+        minutesEl.innerText = String(minutes).padStart(2, '0');
+        secondsEl.innerText = String(seconds).padStart(2, '0');
+    }, 1000);
 }
