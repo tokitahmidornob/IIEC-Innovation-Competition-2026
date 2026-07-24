@@ -106,7 +106,7 @@ const competitionSegments = [
         requiresPayment: false,
         prizePool: "Top 5 Teams receive 1000 BDT each",
         rulebookUrl: "https://drive.google.com/file/d/1iAJGqe8tXZtoIAJ_6sBEhG-HbSMdIUOT/view?usp=sharing",
-        regLink: "YOUR_GOOGLE_FORM_URL_HERE",
+        regLink: "https://forms.gle/zpXGwJAeA3Uq6mREA",
         actionText: "Submit Abstract (Free)"
     }
 ];
