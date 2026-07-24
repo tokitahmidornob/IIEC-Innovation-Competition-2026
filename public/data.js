@@ -28,7 +28,7 @@ const competitionSegments = [
         shortDesc: "Build autonomous robots designed to navigate complex paths with loops, gaps, and obstacles in record time.",
         fullDesc: "A test of pure robotics speed and precision control. Build an autonomous vehicle that can track a line on a contrasting surface. The custom-designed track features sharp turns, intersections, bridges, loops, and breaks to test sensor calibration, speed regulation, and pathfinding logic. Time is of the essence, and penalties are applied for going off-track.",
         teamSize: "Solo or up to 3 members",
-        rulebookUrl: "https://drive.google.com/file/d/1PWIJAUoZ65C3HMp7XfWHpHmzah0Gmhd_/view?usp=sharing",
+        rulebookUrl: "https://drive.google.com/file/d/1F93ORwH6Ctud91Defh1Eg0LJ22rDtfvd/view?usp=drive_link",
         regLink: "https://forms.gle/APrB9C32RnK2AdSi7"
     },
     {
